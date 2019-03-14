@@ -6,6 +6,8 @@
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+
     <fragment xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:map="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -24,8 +26,20 @@
         android:background="#87CEEB"
         android:text="Texto"
         android:textSize="20dp"
+
         android:visibility="visible"
         app:lineHeight="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Para agregar una ubicación, mantener presionado un punto del mapa. "
+        android:layout_alignTop="@id/map"
+        android:background="#DC143C"
+        app:lineHeight="20dp"
+
+
+        />
 
 
 

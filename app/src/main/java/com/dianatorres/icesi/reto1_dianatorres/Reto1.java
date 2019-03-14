@@ -201,10 +201,6 @@ public class Reto1 extends FragmentActivity implements OnMapReadyCallback, OnMar
                 dialog= mBuilder.create();
                 dialog.show();
 
-
-
-
-
             }
         });
 
@@ -246,7 +242,7 @@ public class Reto1 extends FragmentActivity implements OnMapReadyCallback, OnMar
         for(int i=0; i<ubicacionesAgregadas.size();i++){
             mMap.addMarker(new MarkerOptions()
                     .position(new LatLng(ubicacionesAgregadas.get(i).latitud, ubicacionesAgregadas.get(i).longitud))
-                    .title(ubicacionesAgregadas.get(i).getNombre() + " "+ "Usted se encuentra a "+ ubicacionesAgregadas.get(i).getDistancia()+" m"));
+                    .title(ubicacionesAgregadas.get(i).getNombre()).snippet("Usted se encuentra a "+ ubicacionesAgregadas.get(i).getDistancia()+" m"));
         }
 
 
@@ -308,8 +304,7 @@ public class Reto1 extends FragmentActivity implements OnMapReadyCallback, OnMar
 
                     me = mMap.addMarker(new MarkerOptions()
                             .position(new LatLng(current.getLatitude(), current.getLongitude()))
-                            .title("Usted se encuentra en Cl."+DirCalle.getAddressLine(0)
-                            ).icon(BitmapDescriptorFactory.fromResource( R.drawable.personicon))
+                            .title("Ubicación actual").snippet("Usted se encuentra en Cl."+DirCalle.getAddressLine(0)).icon(BitmapDescriptorFactory.fromResource( R.drawable.personicon))
                     );
                 }
 
